@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recreational Activities Explore</title>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700,500"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css"
+    />
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Pacifico|Roboto&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+	
+  </head>
+  
+  <body>
+    <div class="head">
+		<div class="topnav">
+			<a  href="home.html">Home</a>
+			<a class="active" href="#news">Explore</a>
+			<a href="about.html">About Us</a>
+			<a href="">SignUp</a>
+	
+				
+			<div class="bodyexplore">
+				
+			</div>
+		</div>	
+		
+		<div>  
+			<h1 class="home_about_dataset" align="center">Recreation Spring Gym Activities and Details</h1>
+		</div>	
+		
+		<div class="summary_table" style="overflow-x:auto;">
+			<table>
+				<tr>
+					<th>Activity</th>
+					<th>Recreation Center</th>
+					<th>Address</th>
+					<th>Phone Number</th>
+					<th>Age Requirement</th>
+					<th>Days of Week</th>
+					<th>Times</th>
+					<th>Address/Location</th>
+				</tr>
+				<tr>
+					<td>Badminton</td>
+					<td>Potomac Community Center</td>
+					<td>11315 Falls Rd</td>
+					<td>240-777-6960</td>
+					<td>12 & Up</td>
+					<td>Saturday</td>
+					<td>2:00pm - 4:45pm</td>
+					<td>11315 Falls Rd</td>
+				</tr>
+  
+				<tr>
+					<td>Basketball</td>
+					<td>East County Community Center</td>
+					<td>3310 Gateshead Manor Way</td>
+					<td>240-777-8090</td>
+					<td>All Ages</td>
+					<td>Saturday</td>
+					<td>10:00am - 3:00pm</td>
+					<td>3310 Gateshead Manor Way</td>
+				</tr>
+				
+				<tr>
+					<td>Basketball</td>
+					<td>Upper County Community Center</td>
+					<td>8201 Emory Grove Rd</td>
+					<td>240-777-8077</td>
+					<td>All Ages</td>
+					<td>Saturday</td>
+					<td>11:00am - 5:00pm</td>
+					<td>8201 Emory Grove Rd</td>
+				</tr>
+				<tr>
+					<td>Volleyball</td>
+					<td>Germantown Community Center</td>
+					<td>18905 Kingsview Rd</td>
+					<td>240-777-8095</td>
+					<td>18 & Up</td>
+					<td>Saturday</td>
+					<td>9:00am - 11:45am</td>
+					<td>18905 Kingsview Rd</td>
+				</tr>
+				<tr>
+					<td>Pickleball</td>
+					<td>North Potomac Community Center</td>
+					<td>13850 Travilah Rd</td>
+					<td>240-773-4800</td>
+					<td>55 & Up</td>
+					<td>Monday</td>
+					<td>9:00am - 12:00pm</td>
+					<td>13850 Travilah Rd</td>
+				</tr>
+				<tr>
+					<td>Table Tennis</td>
+					<td>Clara Barton Community Center</td>
+					<td>14625 Bauer Dr</td>
+					<td>240-777-6922</td>
+					<td>55 & Up</td>
+					<td>Tuesday & Thursday</td>
+					<td>2:30pm - 4:00pm</td>
+					<td>14625 Bauer Dr</td>
+				</tr>
+			</table>
+		</div>
+ 
+<br><br>
+			<div class="pie_div">
+			<canvas class="pie" id="pie-chart" width="800" height="200"></canvas>
+			</div>
+	
+				<script>
+					new Chart(document.getElementById("pie-chart"), {
+					type: 'pie',
+					responsive:true,
+					data: {
+						labels: ["Badminton", "Basketball", "Floor Hockey", "Pickle Ball", "Table Tennis", "Tiny Tots", "Volleyball"],
+					datasets: [{
+						label: "Number of Entries in the Dataset",
+						backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#red","green","maroon"],
+						data: [21,93,1,23,1,11,25]
+					}]
+					},
+					options: {
+					title: {
+					display: true,
+					text: 'Number of Clubs categorised by Recreational Activities '
+					
+					}
+					}	
+				});
+
+				</script>  
+		</div>
+  </body>
+</html>
